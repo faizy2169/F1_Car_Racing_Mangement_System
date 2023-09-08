@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><title>sp-moon</title><g><path d="M87,287C87,176.54,176.54,87,287,87s200,89.54,200,200a199.25,199.25,0,0,1-19.79,86.85A248.89,248.89,0,0,0,500,250C500,111.93,388.07,0,250,0S0,111.93,0,250,111.93,500,250,500a248.89,248.89,0,0,0,123.85-32.79A199.25,199.25,0,0,1,287,487C176.54,487,87,397.46,87,287Z" fill="#039" style="animation-duration: 1s;"/></g><defs><script type="application/ecmascript"><![CDATA[
+var paramList = ['color','animationDuration'],refs = [],href = document.defaultView.location.href,_del = 0;
+if ( -1 != href.indexOf("?") ) {
+	var paramList = href.split("?")[1].split(/&|;/);
+	for ( var p = 0, pLen = paramList.length; pLen > p; p++ ) {
+		var eachParam = paramList[ p ];var valList = eachParam.split("=");var name = unescape(valList[0]);var value = unescape(valList[1]);refs[name] = value;
+	}
+}
+if(refs['color'] == undefined) { refs['color'] = '#000'; }
+if(refs['animationDuration'] == undefined) { refs['animationDuration'] = 1; }
+if(refs['animationDuration'] == undefined) { refs['animationDuration'] = 1; }
+var ele = document.querySelector('svg g path');
+ele.setAttribute("fill", refs['color']);
+ele.style.animationDuration = refs['animationDuration']+'s';
+]]></script><style type="text/css">
+svg g path { animation-name:rot; animation-iteration-count:infinite; animation-timing-function: linear; transform-origin:50% 50%; }
+@keyframes rot {
+	from { transform: rotate(0); }
+	to { transform: rotate(1turn); }
+}
+</style></defs></svg>
